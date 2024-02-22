@@ -128,7 +128,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\DbResumeContext.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AwardController.cs" />
+    <Compile Include="Controllers\EducationController.cs" />
+    <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InterestController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Entities\About.cs" />
     <Compile Include="Entities\Award.cs" />
     <Compile Include="Entities\Education.cs" />
@@ -263,6 +269,13 @@
     <Content Include="Templates\ResumeTemplate\vendor\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
     <Content Include="Templates\ResumeTemplate\vendor\simple-line-icons\less\simple-line-icons.less" />
     <Content Include="Templates\ResumeTemplate\vendor\simple-line-icons\scss\simple-line-icons.scss" />
+    <Content Include="Views\Shared\_MyResumeLayout.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Experience\Index.cshtml" />
+    <Content Include="Views\Education\Index.cshtml" />
+    <Content Include="Views\Skill\Index.cshtml" />
+    <Content Include="Views\Interest\Index.cshtml" />
+    <Content Include="Views\Award\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
