@@ -128,13 +128,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\DbResumeContext.cs" />
-    <Compile Include="Controllers\AboutController.cs" />
-    <Compile Include="Controllers\AwardController.cs" />
-    <Compile Include="Controllers\EducationController.cs" />
-    <Compile Include="Controllers\ExperienceController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\InterestController.cs" />
-    <Compile Include="Controllers\SkillController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Entities\About.cs" />
     <Compile Include="Entities\Award.cs" />
     <Compile Include="Entities\Education.cs" />
@@ -209,11 +203,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Templates\ResumeTemplate\.gitignore" />
     <Content Include="Templates\ResumeTemplate\.travis.yml" />
     <Content Include="Templates\ResumeTemplate\LICENSE" />
@@ -269,13 +258,14 @@
     <Content Include="Templates\ResumeTemplate\vendor\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
     <Content Include="Templates\ResumeTemplate\vendor\simple-line-icons\less\simple-line-icons.less" />
     <Content Include="Templates\ResumeTemplate\vendor\simple-line-icons\scss\simple-line-icons.scss" />
-    <Content Include="Views\Shared\_MyResumeLayout.cshtml" />
-    <Content Include="Views\About\Index.cshtml" />
-    <Content Include="Views\Experience\Index.cshtml" />
-    <Content Include="Views\Education\Index.cshtml" />
-    <Content Include="Views\Skill\Index.cshtml" />
-    <Content Include="Views\Interest\Index.cshtml" />
-    <Content Include="Views\Award\Index.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Default\About.cshtml" />
+    <Content Include="Views\Default\Experience.cshtml" />
+    <Content Include="Views\Default\Education.cshtml" />
+    <Content Include="Views\Default\Skill.cshtml" />
+    <Content Include="Views\Default\Interest.cshtml" />
+    <Content Include="Views\Default\Award.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
