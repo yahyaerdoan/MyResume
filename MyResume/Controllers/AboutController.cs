@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyResume.Entities;
+using MyResume.Repositories.EntityRepositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +11,45 @@ namespace MyResume.Controllers
     public class AboutController : Controller
     {
         // GET: About
+        AboutRepository aboutRepository = new AboutRepository();
         public ActionResult Index()
+        {            
+            var value = aboutRepository.TList();
+            return View(value);
+        }
+        [HttpGet]
+        public ActionResult CreateAbout()
         {
             return View();
+        }
+        [HttpPost]
+        public ActionResult CreateAbout(About about)
+        {
+            aboutRepository.TAdd(about);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteAbout(int id)
+        {
+            About about = aboutRepository.Find(aboutId => aboutId.AboutId == id);
+            aboutRepository.TDelete(about);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult UpdateAbout(int id)
+        {
+            About deleteAbout = aboutRepository.Find(aboutId => aboutId.AboutId == id);
+            return View(deleteAbout);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateAbout(About updateAbout)
+        {
+            About about = aboutRepository.Find(aboutId => aboutId.AboutId == updateAbout.AboutId);
+            about.ZipCode = updateAbout.ZipCode;
+            aboutRepository.TUpdate(updateAbout);
+            return RedirectToAction("Index");
         }
     }
 }

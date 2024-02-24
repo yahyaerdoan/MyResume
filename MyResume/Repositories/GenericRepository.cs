@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 
 namespace MyResume.Repositories
@@ -35,6 +36,11 @@ namespace MyResume.Repositories
         public void TUpdate(TEntity entity)
         {
             dbResumeContext.SaveChanges();
+        }
+        
+        public TEntity Find(Expression<Func<TEntity, bool>> where)
+        {
+            return dbResumeContext.Set<TEntity>().FirstOrDefault(where);
         }
     }
 }

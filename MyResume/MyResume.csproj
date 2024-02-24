@@ -149,6 +149,12 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\EntityRepositories\AboutRepository.cs" />
+    <Compile Include="Repositories\EntityRepositories\AwardRepository.cs" />
+    <Compile Include="Repositories\EntityRepositories\EducationRepository.cs" />
+    <Compile Include="Repositories\EntityRepositories\ExperienceRepository.cs" />
+    <Compile Include="Repositories\EntityRepositories\InterestRepository.cs" />
+    <Compile Include="Repositories\EntityRepositories\SkillRepository.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2371,6 +2377,8 @@
     <Content Include="Views\Skill\Index.cshtml" />
     <Content Include="Views\Interest\Index.cshtml" />
     <Content Include="Views\Award\Index.cshtml" />
+    <Content Include="Views\About\CreateAbout.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

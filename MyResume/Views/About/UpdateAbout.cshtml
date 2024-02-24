@@ -1,0 +1,102 @@
+﻿@model MyResume.Entities.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card card-warning">
+        <div class="card-header">
+            <h3 class="card-title">Update About</h3>
+        </div>
+        <div class="card-body">
+            <form role="form" method="post" action="/About/UpdateAbout/">
+                <div class="row">
+                    <!--<div class="col-sm-6">
+        <div class="form-group">
+            <label>About Id</label>-->
+                    @*<input type="text" class="form-control" placeholder="about id" name="AboutId">*@
+                    <!--</div>
+    </div>-->
+                    @Html.TextBoxFor(i => i.AboutId, new { @class = "form-control", type = "hidden" })
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>FirstName</label>
+                            <input type="text" class="form-control" placeholder="first name" name="FirstName">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" placeholder="last name" name="LastName">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Image</label>
+                            <input type="text" class="form-control" placeholder="image" name="Image">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="text" class="form-control" placeholder="phone number" name="PhoneNumber">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>E-Mail</label>
+                            <input type="email" class="form-control" placeholder="e-mail" name="Email">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" class="form-control" placeholder="address" name="Address">
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" class="form-control" placeholder="City" name="City">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>State</label>
+                            <input type="text" class="form-control" placeholder="state" name="State">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Country</label>
+                            <input type="text" class="form-control" placeholder="country" name="Country">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Zip Code</label>
+                            @*<input type="text" class="form-control" placeholder="zip code" name="ZipCode">*@
+                            @Html.TextBoxFor(i => i.ZipCode, new { @class = "form-control"})
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" rows="3" placeholder="description" name="Description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-outline-success col-md-12">Update New About</button>
+            </form>
+        </div>
+    </div>
+</div>
+
