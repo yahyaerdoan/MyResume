@@ -1,4 +1,5 @@
-﻿@{
+﻿@model MyResume.Entities.Skill
+@{
     ViewBag.Title = "CreateSkill";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
@@ -13,13 +14,15 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Title</label>
-                            <input type="text" class="form-control" placeholder="title" name="Title" required>
+                            <input type="text" class="form-control" placeholder="title" name="Title">
+                            @Html.ValidationMessageFor(s=> s.Title, "", new { style="color:red"})
                         </div>
                     </div>
-                    @*<div class="col-sm-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label>Description</label>
                             <input type="text" class="form-control" placeholder="description" name="Description">
+                            @Html.ValidationMessageFor(s => s.Title, "", new { style = "color:red" })
                         </div>
                     </div>
 
@@ -27,6 +30,7 @@
                         <div class="form-group">
                             <label>Icon</label>
                             <input type="text" class="form-control" placeholder="icon" name="Icon">
+                            @Html.ValidationMessageFor(s => s.Title, "", new { style = "color:red" })
                         </div>
                     </div>
 
@@ -34,8 +38,9 @@
                         <div class="form-group">
                             <label>Rate</label>
                             <input type="text" class="form-control" placeholder="rate" name="Rate">
+                            @Html.ValidationMessageFor(s => s.Title, "", new { style = "color:red" })
                         </div>
-                    </div>*@                  
+                    </div>                  
                 </div>
              
                 <button type="submit" class="btn btn-outline-success col-md-12">Create New About</button>

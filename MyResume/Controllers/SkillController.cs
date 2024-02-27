@@ -26,6 +26,10 @@ namespace MyResume.Controllers
         [HttpPost]
         public ActionResult CreateSkill(Skill skill)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("CreateSkill");
+            }
             skillRepository.TAdd(skill);
             return RedirectToAction("Index");
         }

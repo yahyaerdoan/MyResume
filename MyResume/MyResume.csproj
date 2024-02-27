@@ -151,6 +151,18 @@
     <Compile Include="Migrations\202402261950545_AddRate.designer.cs">
       <DependentUpon>202402261950545_AddRate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402271751389_addRequired.cs" />
+    <Compile Include="Migrations\202402271751389_addRequired.designer.cs">
+      <DependentUpon>202402271751389_addRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402271809492_addRequiredForTable.cs" />
+    <Compile Include="Migrations\202402271809492_addRequiredForTable.designer.cs">
+      <DependentUpon>202402271809492_addRequiredForTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402271825221_addRequiredAllTable.cs" />
+    <Compile Include="Migrations\202402271825221_addRequiredAllTable.designer.cs">
+      <DependentUpon>202402271825221_addRequiredAllTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EntityRepositories\AboutRepository.cs" />
@@ -2418,6 +2430,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202402261950545_AddRate.resx">
       <DependentUpon>202402261950545_AddRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402271751389_addRequired.resx">
+      <DependentUpon>202402271751389_addRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402271809492_addRequiredForTable.resx">
+      <DependentUpon>202402271809492_addRequiredForTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402271825221_addRequiredAllTable.resx">
+      <DependentUpon>202402271825221_addRequiredAllTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

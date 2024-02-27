@@ -14,32 +14,31 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Title</label>
-                            <input type="text" class="form-control" placeholder="title" name="Title">
+                            <input type="text" class="form-control" placeholder="title" name="Title" value="@Model.Title">
                             @Html.TextBoxFor(s=> s.SkillId, new {@class= "form-control",  placeholder = "title", type="hidden" })
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Description</label>
-                            <input type="text" class="form-control" placeholder="description" name="Description">
+                            <input type="text" class="form-control" placeholder="description" name="Description" value="@Model.Description">
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Icon</label>
-                            <input type="text" class="form-control" placeholder="icon" name="Icon">
+                            <input type="text" class="form-control" placeholder="icon" name="Icon" value="@Model.Icon">
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Rate</label>
-                            <input type="text" class="form-control" placeholder="rate" name="Rate">
+                            <input type="text" class="form-control" placeholder="rate" name="Rate" value="@Model.Rate">
                         </div>
                     </div>
                 </div>
-
                 <button type="submit" class="btn btn-outline-success col-md-12">Update New About</button>
             </form>
         </div>
