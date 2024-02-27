@@ -39,8 +39,8 @@ namespace MyResume.Controllers
         [HttpGet]
         public ActionResult UpdateAbout(int id)
         {
-            About deleteAbout = aboutRepository.Find(aboutId => aboutId.AboutId == id);
-            return View(deleteAbout);
+            About updateAbout = aboutRepository.Find(aboutId => aboutId.AboutId == id);
+            return View(updateAbout);
         }
 
         [HttpPost]

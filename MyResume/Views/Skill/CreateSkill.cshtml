@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "CreateSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <div class="card card-warning">
+        <div class="card-header">
+            <h3 class="card-title">Create Skill</h3>
+        </div>
+        <div class="card-body">
+            <form role="form" method="post" action="/Skill/CreateSkill/">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" placeholder="title" name="Title">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input type="text" class="form-control" placeholder="description" name="Description">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Icon</label>
+                            <input type="text" class="form-control" placeholder="icon" name="Icon">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Rate</label>
+                            <input type="text" class="form-control" placeholder="rate" name="Rate">
+                        </div>
+                    </div>                  
+                </div>
+             
+                <button type="submit" class="btn btn-outline-success col-md-12">Create New About</button>
+            </form>
+        </div>
+    </div>
+</div>
+
