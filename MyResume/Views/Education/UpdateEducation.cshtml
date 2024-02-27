@@ -1,0 +1,87 @@
+﻿@model MyResume.Entities.Education
+@{
+    ViewBag.Title = "UpdateEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <div class="card card-warning">
+        <div class="card-header">
+            <h3 class="card-title">Update Education</h3>
+        </div>
+        <div class="card-body">
+            <form role="form" method="post" action="/Education/UpdateEducation/">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>School Name</label>
+                            <input type="text" class="form-control" placeholder="school name" name="SchoolName">
+                            @Html.HiddenFor(e =>e.EducationId, new { @class = "form-control", placeholder = "title"})
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Degree</label>
+                            <input type="text" class="form-control" placeholder="degree" name="Degree">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Study Of Field</label>
+                            <input type="text" class="form-control" placeholder="study of field" name="FieldOfStudy">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Grade</label>
+                            <input type="text" class="form-control" placeholder="grade" name="Grade">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Grade Point Average</label>
+                            <input type="text" class="form-control" placeholder="grade point average" name="GradePointAverage">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Starting Month</label>
+                            <input type="month" class="form-control" placeholder="starting month" name="StartingMonth">
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Starting Year</label>
+                            <input type="month" class="form-control" placeholder="starting year" name="StartingYear">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Ending Month</label>
+                            <input type="month" class="form-control" placeholder="ending month" name="EndingMonth">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Ending Year</label>
+                            <input type="month" class="form-control" placeholder="ending year" name="EndingYear">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" rows="3" placeholder="description" name="Description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-outline-success col-md-12">Update New Education</button>
+            </form>
+        </div>
+    </div>
+</div>
+

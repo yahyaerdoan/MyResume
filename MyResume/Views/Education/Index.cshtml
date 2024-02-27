@@ -1,8 +1,52 @@
-﻿
+﻿@model List<MyResume.Entities.Education>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Education List</h2>
+<div class="container-fluid">
+    <div class="card card-warning">
+        <div class="card-header">
+            <h3 class="card-title">Education List</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <tr>
+                    <th>Id</th>
+                    <th>School Name</th>
+                    <th>Degree</th>
+                    <th>Description</th>
+                    <th>Study Of Field</th>
+                    <th>Grade</th>
+                    <th>Grade Point Average</th>
+                    <th>Starting Month</th>
+                    <th>Starting Year</th>
+                    <th>Ending Month</th>
+                    <th>Ending Year</th>                    
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.EducationId</td>
+                        <td>@item.SchoolName</td>
+                        <td>@item.Degree</td>
+                        <td style="text-align:justify">@item.Description</td>
+                        <td>@item.FieldOfStudy</td>
+                        <td>@item.Grade</td>
+                        <td>@item.GradePointAverage</td>
+                        <td>@item.StartingMonth.ToString("MMMM")</td>
+                        <td>@item.StartingYear.Year</td>
+                        <td>@item.EndingMonth.ToString("MMMM")</td>
+                        <td>@item.EndingYear.Year</td>                        
+                        <td><a href="/Education/UpdateEducation/@item.EducationId" class="btn btn-outline-primary">Update</a></td>
+                        <td><a href="/Education/DeleteEducation/@item.EducationId" class="btn btn-outline-danger">Delete</a></td>
+                    </tr>
+                }
+            </table>
+            <a href="/Education/CreateEducation/" class="btn btn-outline-primary col-md-12">Create New Education</a>
+        </div>
+    </div>
+</div>
 
