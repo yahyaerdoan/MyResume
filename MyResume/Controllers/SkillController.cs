@@ -32,7 +32,7 @@ namespace MyResume.Controllers
 
         public ActionResult DeleteSkill(int id)
         {
-            Skill skill = skillRepository.Find(skillId => skillId.SkillId == id);
+            var skill = skillRepository.Find(skillId => skillId.SkillId == id);
             skillRepository.TDelete(skill);
             return RedirectToAction("Index");
         }
@@ -40,14 +40,14 @@ namespace MyResume.Controllers
         [HttpGet]
         public ActionResult UpdateSkill(int id)
         {
-            Skill UpdateSkill = skillRepository.Find(skillId => skillId.SkillId == id);
+            var UpdateSkill = skillRepository.Find(skillId => skillId.SkillId == id);
             return View(UpdateSkill);
         }
 
         [HttpPost]
         public ActionResult UpdateSkill(Skill updateSkill)
         {
-            Skill skill = skillRepository.Find(updateSkillId => updateSkillId.SkillId == updateSkill.SkillId);
+            var skill = skillRepository.Find(updateSkillId => updateSkillId.SkillId == updateSkill.SkillId);
             skill.Title = updateSkill.Title;
             skill.Description = updateSkill.Description;
             skill.Icon = updateSkill.Icon;
