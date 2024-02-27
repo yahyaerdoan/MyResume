@@ -2399,6 +2399,8 @@
     <Content Include="Views\Skill\UpdateSkill.cshtml" />
     <Content Include="Views\Education\CreateEducation.cshtml" />
     <Content Include="Views\Education\UpdateEducation.cshtml" />
+    <Content Include="Views\Award\CreateAward.cshtml" />
+    <Content Include="Views\Award\UpdateAward.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

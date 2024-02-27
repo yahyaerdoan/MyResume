@@ -1,8 +1,53 @@
-﻿
+﻿@model List<MyResume.Entities.Award>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<div class="container-fluid">
+    <div class="card card-warning">
+        <div class="card-header">
+            <h3 class="card-title">Award List</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <div class="tab-pane" id="timeline">
+                <!-- The timeline -->
+                <div class="timeline timeline-inverse">
+                    <!-- timeline time label -->
+                    @foreach (var item in Model)
+                    {
+                        <div class="time-label">
+                            <span class="bg-success">
+                                @item.IssuedDate.ToString("MMM")
+                                @item.IssuedDate.ToString("yyyy")
+                            </span>
+                        </div>
+                        <!-- /.timeline-label -->
+                        <!-- timeline item -->
+                        <div>
+                            <i class="fas fa-envelope bg-primary"></i>
+                            <div class="timeline-item">
+                                <span class="time" style="color:blue"><b><h5>@item.IssuedFrom</h5></b></span>
+                                
+                                <h3 class="timeline-header"><a style="color:blue">@item.Category</a><b> @item.Title</b></h3>
+                                <div class="timeline-body">
+                                    <div class="title"> <b> @item.Subject</b></div>
+                                  @item.Description
+                                </div>
+                                <div class="timeline-footer">
+                                    <a href="/Award/UpdateAward/@item.AwardId" class="btn btn-primary btn-sm">Update</a>
+                                    <a href="/Award/DeletesAward/@item.AwardId" class="btn btn-danger btn-sm">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
 
-<h2>Award List</h2>
-
+                </div>
+            </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer clearfix">
+            <a href="/Skill/CreateSkill/" class="btn btn-outline-primary col-md-12">Create New Award</a>
+        </div>
+    </div>
+</div>
