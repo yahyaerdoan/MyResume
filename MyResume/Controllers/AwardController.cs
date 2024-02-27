@@ -41,7 +41,7 @@ namespace MyResume.Controllers
         [HttpGet]
         public ActionResult UpdateAward(int id)
         {
-            var values = awardRepositories.Find(deleteAward => deleteAward.AwardId == id);
+            var values = awardRepositories.Find(deleteAward => deleteAward.AwardId == id);          
             return View(values);
         }
         [HttpPost]

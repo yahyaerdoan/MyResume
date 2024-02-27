@@ -3,6 +3,8 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+@{ string color = ""; }
+
 <div class="container-fluid">
     <div class="card card-warning">
         <div class="card-header">
@@ -16,8 +18,17 @@
                     <!-- timeline time label -->
                     @foreach (var item in Model)
                     {
+
+                        if (item.AwardId%2==0)
+                        {
+                            color = "bg-success";
+                        }
+                        else
+                        {
+                            color = "bg-fuchsia";
+                        }
                         <div class="time-label">
-                            <span class="bg-success">
+                            <span class="@color">
                                 @item.IssuedDate.ToString("MMM")
                                 @item.IssuedDate.ToString("yyyy")
                             </span>
@@ -25,7 +36,7 @@
                         <!-- /.timeline-label -->
                         <!-- timeline item -->
                         <div>
-                            <i class="fas fa-envelope bg-primary"></i>
+                            <i class="fas fa-envelope @color"></i>
                             <div class="timeline-item">
                                 <span class="time" style="color:blue"><b><h5>@item.IssuedFrom</h5></b></span>
                                 
@@ -36,7 +47,7 @@
                                 </div>
                                 <div class="timeline-footer">
                                     <a href="/Award/UpdateAward/@item.AwardId" class="btn btn-primary btn-sm">Update</a>
-                                    <a href="/Award/DeletesAward/@item.AwardId" class="btn btn-danger btn-sm">Delete</a>
+                                    <a href="/Award/DeleteAward/@item.AwardId" class="btn btn-danger btn-sm">Delete</a>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +58,7 @@
         </div>
         <!-- /.card-body -->
         <div class="card-footer clearfix">
-            <a href="/Skill/CreateSkill/" class="btn btn-outline-primary col-md-12">Create New Award</a>
+            <a href="/Award/CreateAward/" class="btn btn-outline-primary col-md-12">Create New Award</a>
         </div>
     </div>
 </div>

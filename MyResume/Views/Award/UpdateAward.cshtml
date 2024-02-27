@@ -16,7 +16,7 @@
                         <div class="form-group">
                             <label>Title</label>
                             <input type="text" class="form-control" placeholder="title" name="Title" required value="@Model.Title">
-                            @Html.HiddenFor(a=> a.AwardId)
+                            @Html.HiddenFor(a => a.AwardId)
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -40,6 +40,12 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
+                            <label>Icon</label>
+                            <input type="text" class="form-control" placeholder="icon" name="icon" required value="@Model.Icon">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
                             <label>IssuedDate</label>
                             <input type="month" class="form-control" placeholder="issued date" name="IssuedDate" required value="@Model.IssuedDate">
                         </div>
@@ -49,7 +55,7 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea class="form-control" rows="3" placeholder="description" name="Description" required value="@Model.Description"></textarea>
+                            <textarea class="form-control" rows="3" placeholder="description" name="Description" required value="@Model.Description"></textarea>                     
                         </div>
                     </div>
                 </div>
