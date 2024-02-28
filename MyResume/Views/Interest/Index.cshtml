@@ -1,8 +1,37 @@
-﻿
+﻿@model List<MyResume.Entities.Interest>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Interest List</h2>
+<div class="container-fluid">
+    <div class="card card-warning">
+        <div class="card-header">
+            <h3 class="card-title">Interest List</h3>
+        </div>
+        <div class="card-body">
+            <form method="post"  action="/Interest/Index/">
+                @foreach (var item in Model)
+                {
+                    <div class="row">
+                        <div class="col-sm-12" style="margin-bottom:1rem">
+
+                            <div class="form-group">
+                                @ViewBag.GetId
+                                <label><input class="form-control" type="text" style="font-weight: bold; border:hidden" placeholder="title" name="Title" value=@item.Title></label>                              
+                                <textarea class="form-control" rows="3" placeholder="description" name="Description">@item.Description</textarea>
+                            </div>
+                            <button class="btn btn-outline-primary">Update</button>
+                            <a href="/Interest/DeleteInterest/@item.InterestId" class="btn btn-outline-danger">Delete</a>
+                        </div>
+                    </div>
+                }
+            </form>
+           
+        </div>
+        <div class="card-footer clearfix">
+            <a href="/Interest/CreateInterest/" class="btn btn-outline-primary col-md-12">Create New Experience</a>
+        </div>
+    </div>
+</div>
 

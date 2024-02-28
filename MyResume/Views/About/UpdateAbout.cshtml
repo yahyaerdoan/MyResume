@@ -12,49 +12,49 @@
         <div class="card-body">
             <form role="form" method="post" action="/About/UpdateAbout/">
                 <div class="row">
-                    <!--<div class="col-sm-6">
-        <div class="form-group">
-            <label>About Id</label>-->
-                    @*<input type="text" class="form-control" placeholder="about id" name="AboutId">*@
-                    <!--</div>
-    </div>-->
-                    @Html.TextBoxFor(i => i.AboutId, new { @class = "form-control", type = "hidden" })
+                    <div class="col-sm-6" hidden>
+                        <div class="form-group">
+                            <label>About Id</label>
+                            <input type="text" class="form-control" placeholder="about id" name="AboutId" value="@Model.AboutId" >
+                            @*@Html.TextBoxFor(i => i.AboutId, new { @class = "form-control", type = "hidden" })*@
+                        </div>
+                    </div>                    
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>FirstName</label>
-                            <input type="text" class="form-control" placeholder="first name" name="FirstName">
+                            <input type="text" class="form-control" placeholder="first name" name="FirstName" value="@Model.FirstName">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Last Name</label>
-                            <input type="text" class="form-control" placeholder="last name" name="LastName">
+                            <input type="text" class="form-control" placeholder="last name" name="LastName" value="@Model.LastName">
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Image</label>
-                            <input type="text" class="form-control" placeholder="image" name="Image">
+                            <input type="text" class="form-control" placeholder="image" name="Image" value="@Model.Image">
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Phone Number</label>
-                            <input type="text" class="form-control" placeholder="phone number" name="PhoneNumber">
+                            <input type="text" class="form-control" placeholder="phone number" name="PhoneNumber" value="@Model.PhoneNumber">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>E-Mail</label>
-                            <input type="email" class="form-control" placeholder="e-mail" name="Email">
+                            <input type="email" class="form-control" placeholder="e-mail" name="Email" value="@Model.Email">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Address</label>
-                            <input type="text" class="form-control" placeholder="address" name="Address">
+                            <input type="text" class="form-control" placeholder="address" name="Address" value="@Model.Address">
                         </div>
                     </div>
 
@@ -62,27 +62,26 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>City</label>
-                            <input type="text" class="form-control" placeholder="City" name="City">
+                            <input type="text" class="form-control" placeholder="City" name="City" value="@Model.City">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>State</label>
-                            <input type="text" class="form-control" placeholder="state" name="State">
+                            <input type="text" class="form-control" placeholder="state" name="State" value="@Model.State">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Country</label>
-                            <input type="text" class="form-control" placeholder="country" name="Country">
+                            <input type="text" class="form-control" placeholder="country" name="Country" value="@Model.Country">
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Zip Code</label>
-                            @*<input type="text" class="form-control" placeholder="zip code" name="ZipCode">*@
-                            @Html.TextBoxFor(i => i.ZipCode, new { @class = "form-control"})
+                            <input type="text" class="form-control" placeholder="zip code" name="ZipCode" value="@Model.ZipCode">                           
                         </div>
                     </div>
                 </div>
@@ -90,7 +89,7 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea class="form-control" rows="3" placeholder="description" name="Description"></textarea>
+                            <textarea class="form-control" rows="3" placeholder="description" name="Description">@Model.Description</textarea>
                         </div>
                     </div>
                 </div>

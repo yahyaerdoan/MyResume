@@ -47,7 +47,16 @@ namespace MyResume.Controllers
         public ActionResult UpdateAbout(About updateAbout)
         {
             About about = aboutRepository.Find(aboutId => aboutId.AboutId == updateAbout.AboutId);
-            about.ZipCode = updateAbout.ZipCode;
+            about.FirstName = updateAbout.FirstName;
+            about.LastName = updateAbout.LastName;
+            about.Description = updateAbout.Description;
+            about.PhoneNumber = updateAbout.PhoneNumber;
+            about.Email = updateAbout.Email;
+            about.Address = updateAbout.Address;
+            about.City = updateAbout.City;
+            about.State = updateAbout.State;
+            about.Country = updateAbout.Country;
+            about.ZipCode = updateAbout.ZipCode;            
             aboutRepository.TUpdate(updateAbout);
             return RedirectToAction("Index");
         }
