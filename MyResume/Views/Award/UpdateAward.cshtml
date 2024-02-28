@@ -47,7 +47,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>IssuedDate</label>
-                            <input type="month" class="form-control" placeholder="issued date" name="IssuedDate" required value="@Model.IssuedDate">
+                            <input type="date" class="form-control" placeholder="issued date" name="IssuedDate" required value="@Model.IssuedDate" >
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea class="form-control" rows="3" placeholder="description" name="Description" required value="@Model.Description"></textarea>                     
+                            <textarea class="form-control" rows="3" placeholder="description" name="Description" required>@Model.Description</textarea>                     
                         </div>
                     </div>
                 </div>
