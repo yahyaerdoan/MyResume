@@ -22,6 +22,12 @@ namespace MyResume.Controllers
             return PartialView(values);
         }
 
+        public PartialViewResult SocialMedia()
+        {
+            var values = dbResumeContext.SocialMedias.ToList();
+            return PartialView(values);
+        }
+
         public PartialViewResult Experience()
         {
             var values = dbResumeContext.Experiences.ToList();

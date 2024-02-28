@@ -1,0 +1,14 @@
+﻿@model List<MyResume.Entities.SocialMedia>
+<ul class="list-inline list-social-icons mb-0">
+    @foreach (var item in Model)
+    {
+        <li class="list-inline-item">
+            <a href="#">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="@item.Icon"></i>
+                </span>
+            </a>
+        </li>
+    }   
+</ul>
