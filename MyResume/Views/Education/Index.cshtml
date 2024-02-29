@@ -22,7 +22,7 @@
                     <th>Starting Month</th>
                     <th>Starting Year</th>
                     <th>Ending Month</th>
-                    <th>Ending Year</th>                    
+                    <th>Ending Year</th>
                     <th>Update</th>
                     <th>Delete</th>
                 </tr>
@@ -39,12 +39,14 @@
                         <td>@item.StartingMonth.ToString("MMMM")</td>
                         <td>@item.StartingYear.Year</td>
                         <td>@item.EndingMonth.ToString("MMMM")</td>
-                        <td>@item.EndingYear.Year</td>                        
+                        <td>@item.EndingYear.Year</td>
                         <td><a href="/Education/UpdateEducation/@item.EducationId" class="btn btn-outline-primary">Update</a></td>
                         <td><a href="/Education/DeleteEducation/@item.EducationId" class="btn btn-outline-danger">Delete</a></td>
                     </tr>
                 }
             </table>
+        </div>
+        <div class="card-footer clearfix">
             <a href="/Education/CreateEducation/" class="btn btn-outline-primary col-md-12">Create New Education</a>
         </div>
     </div>
