@@ -49,13 +49,16 @@ namespace MyResume.Controllers
         public ActionResult UpdateSocialMedia(int id)
         {
             var values = socialMediaRepository.Find(s => s.SocialMediaId == id);
+            TempData["AboutId"] = values.AboutId;
             return View(values);
         }
         [HttpPost]
         public ActionResult UpdateSocialMedia(SocialMedia updateSocialMedia)
         {
             var socialMedia = socialMediaRepository.Find(s => s.SocialMediaId == updateSocialMedia.SocialMediaId);
-            socialMedia.AboutId = updateSocialMedia.AboutId= 17;
+            int id = (int)TempData["AboutId"];
+            socialMedia.AboutId = id;
+            //socialMedia.AboutId = updateSocialMedia.AboutId= 17;
             socialMedia.Statu = updateSocialMedia.Statu= true;
             socialMedia.Name = updateSocialMedia.Name;
             socialMedia.Icon = updateSocialMedia.Icon;
