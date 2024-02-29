@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "CreateAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card card-warning">
+        <div class="card-header">
+            <h3 class="card-title">Create Admin</h3>
+        </div>
+        <div class="card-body">
+            <form role="form" method="post" action="/Admin/CreateAdmin/">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <input type="text" class="form-control" placeholder="user name" name="UserName">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="password" name="Password">
+                        </div>
+                    </div>               
+                </div>               
+                <button type="submit" class="btn btn-outline-success col-md-12">Create New Admin</button>
+            </form>
+        </div>
+    </div>
+</div>
+

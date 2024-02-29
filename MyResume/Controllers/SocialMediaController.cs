@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MyResume.Controllers
 {
+    
     public class SocialMediaController : Controller
     {
         // GET: SocialMedia
@@ -17,6 +18,7 @@ namespace MyResume.Controllers
         {
             return PartialView();
         }
+        
         public ActionResult Index()
         {
             var values = socialMediaRepository.TList();

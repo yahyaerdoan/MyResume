@@ -16,5 +16,6 @@ namespace MyResume.Context
         public DbSet<Skill> Skills { get; set; }
         public DbSet<Interest> Interests { get; set; }
         public DbSet<Award> Awards { get; set; }
+        public DbSet<Admin> Admins { get; set; }
     }
 }

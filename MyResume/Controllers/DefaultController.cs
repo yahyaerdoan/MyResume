@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace MyResume.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         // GET: Default
