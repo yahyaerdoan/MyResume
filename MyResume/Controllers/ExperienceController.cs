@@ -14,7 +14,7 @@ namespace MyResume.Controllers
         ExperienceRepository experienceRepository = new ExperienceRepository();
         public ActionResult Index()
         {
-            var values = experienceRepository.TList();
+            var values = experienceRepository.TList().OrderByDescending(i=>i.ExperienceId).ToList();
             return View(values);
         }
 
@@ -48,13 +48,14 @@ namespace MyResume.Controllers
         public ActionResult UpdateExperience(Experience updateExperience)
         {
             var experience = experienceRepository.Find(e => e.ExperienceId == updateExperience.ExperienceId);
-            experience.Header = updateExperience.Title;
+            experience.Header = updateExperience.Header;
+            experience.Title = updateExperience.Title;
             experience.Description = updateExperience.Description;
             experience.StartingMonth = updateExperience.StartingMonth;
             experience.StartingYear = updateExperience.StartingYear;
             experience.EndingMonth = updateExperience.EndingMonth;
             experience.EndingYear = updateExperience.EndingYear;
-            experienceRepository.TUpdate(updateExperience);
+            experienceRepository.TUpdate(experience);
             return RedirectToAction("Index");
         }
     }

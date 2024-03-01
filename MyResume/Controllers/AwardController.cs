@@ -34,7 +34,7 @@ namespace MyResume.Controllers
         {
             var values = awardRepositories.Find(deleteAward => deleteAward.AwardId == id);
             awardRepositories.TDelete(values);
-            return View();
+            return RedirectToAction("Index");
         }
 
 

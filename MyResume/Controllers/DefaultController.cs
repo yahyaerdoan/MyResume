@@ -31,7 +31,7 @@ namespace MyResume.Controllers
 
         public PartialViewResult Experience()
         {
-            var values = dbResumeContext.Experiences.ToList();
+            var values = dbResumeContext.Experiences.OrderByDescending(e=> e.ExperienceId).ToList();
             return PartialView(values);
         }
 
