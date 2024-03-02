@@ -4,15 +4,20 @@
         <h2 class="mb-5">Skills</h2>
 
         <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul class="list-inline list-icons">
-            @foreach (var item in Model)
-            {
+        @foreach (var item in Model)
+        {
+            <ul class="list-inline list-icons">
+
                 <li class="list-inline-item">
                     <i class="fa fa-dot-circle">@item.Title</i>
-                </li>
-            }
-        </ul>
-
-       
-    </div>
+                </li>                
+            </ul>           
+            <ul class="fa-ul mb-0">
+                <li>
+                    <i class="fa-li fa fa-check"></i>
+                    @item.Description
+                </li>              
+            </ul>
+        }
+        </div>
 </section>

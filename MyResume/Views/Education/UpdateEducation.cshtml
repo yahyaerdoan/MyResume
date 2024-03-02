@@ -14,40 +14,40 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>School Name</label>
-                            <input type="text" class="form-control" placeholder="school name" name="SchoolName">
+                            <input type="text" class="form-control" placeholder="school name" name="SchoolName" value="@Model.SchoolName">
                             @Html.HiddenFor(e =>e.EducationId, new { @class = "form-control", placeholder = "title"})
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Degree</label>
-                            <input type="text" class="form-control" placeholder="degree" name="Degree">
+                            <input type="text" class="form-control" placeholder="degree" name="Degree" value="@Model.Degree">
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Study Of Field</label>
-                            <input type="text" class="form-control" placeholder="study of field" name="FieldOfStudy">
+                            <input type="text" class="form-control" placeholder="study of field" name="FieldOfStudy" value="@Model.FieldOfStudy">
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Grade</label>
-                            <input type="text" class="form-control" placeholder="grade" name="Grade">
+                            <input type="text" class="form-control" placeholder="grade" name="Grade" value="@Model.Grade">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Grade Point Average</label>
-                            <input type="text" class="form-control" placeholder="grade point average" name="GradePointAverage">
+                            <input type="text" class="form-control" placeholder="grade point average" name="GradePointAverage" value="@Model.GradePointAverage">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Starting Month</label>
-                            <input type="month" class="form-control" placeholder="starting month" name="StartingMonth">
+                            <input type="date" class="form-control" placeholder="starting month" name="StartingMonth" value="@Model.StartingMonth.ToString("yyyy-MM-dd")">
                         </div>
                     </div>
 
@@ -55,19 +55,19 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Starting Year</label>
-                            <input type="month" class="form-control" placeholder="starting year" name="StartingYear">
+                            <input type="date" class="form-control" placeholder="starting year" name="StartingYear" value="@Model.StartingYear.ToString("yyyy-MM-dd")">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Ending Month</label>
-                            <input type="month" class="form-control" placeholder="ending month" name="EndingMonth">
+                            <input type="date" class="form-control" placeholder="ending month" name="EndingMonth" value="@Model.EndingMonth.ToString("yyyy-MM-dd")">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Ending Year</label>
-                            <input type="month" class="form-control" placeholder="ending year" name="EndingYear">
+                            <input type="date" class="form-control" placeholder="ending year" name="EndingYear" value="@Model.EndingYear.ToString("yyyy-MM-dd")">
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea class="form-control" rows="3" placeholder="description" name="Description"></textarea>
+                            <textarea class="form-control" rows="3" placeholder="description" name="Description">@Model.Description</textarea>
                         </div>
                     </div>
                 </div>

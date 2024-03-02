@@ -7,7 +7,7 @@
             {
                 <li>
                     <i class="fa-li fa fa-trophy text-warning"></i>
-                    @item.Title
+                    <span style="color:black">@item.Title,</span> @item.Category (@item.Subject) - @item.IssuedFrom - @item.IssuedDate.ToString("MMMM") @item.IssuedDate.Year
                 </li>
             }           
         </ul>

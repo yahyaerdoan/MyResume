@@ -11,20 +11,20 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-            <table class="table table-bordered">
+            <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th style="width: 10px">#</th>
+                        <th>#</th>
                         <th>Task</th>
                         <th>Description</th>
                         <th>Progress</th>
-                        <th style="width: 40px">Rate</th>
+                        <th>Rate</th>
                         <th>Upate</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <div class="progress-bar progress-bar-success"></div>
+                    @{ int i = 0;}
                     @foreach (var item in Model)
                     {
                         if (item.Rate >= 0 && item.Rate <= 50)
@@ -42,14 +42,14 @@
                             colorRate = "progress-bar  bg-info";
                         }
 
-
                         if (item.Rate >= 85 && item.Rate <= 100)
                         {
                             colorRate = "progress-bar  bg-success";
                         }
 
                         <tr>
-                            <td>@item.SkillId</td>
+                            <td @{i++;}>@i.</td>
+                            <td hidden>@item.SkillId</td>
                             <td>@item.Title</td>
                             <td>@item.Description</td>
                             <td>
@@ -63,12 +63,12 @@
                             <td>
                                 <a href="/Skill/UpdateSkill/@item.SkillId" class="btn btn-outline-primary">
                                     <i class="fas fa-pencil-alt"></i>
-                                Update</a>
+                                </a>
                             </td>
                             <td>
                                 <a href="/Skill/DeleteSkill/@item.SkillId" class="btn btn-outline-danger">
                                     <i class="fas fa-trash"></i>
-                                Delete</a>
+                                </a>
                             </td>
                         </tr>
                     }
